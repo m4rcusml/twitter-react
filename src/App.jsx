@@ -1,9 +1,10 @@
-import MenuButton from './components/MenuButton/index'
+import Menu from "./components/Menu"
+import './App.css'
 
 function App() {
   return (
     <>
-      <MenuButton>Clique aqui</MenuButton>
+      <Menu />
     </>
   )
 }
