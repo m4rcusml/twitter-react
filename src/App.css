@@ -13,4 +13,16 @@ html {
   background-color: black;
   font-size: 1.6rem;
   font-family: sans-serif;
+  display: grid;
+  grid-template-areas: "menu main .";
+  grid-template-columns: 230px 600px 1fr;
+  grid-template-rows: 100vh;
+}
+
+header {
+  grid-area: menu;
+}
+
+main {
+  grid-area: main;
 }

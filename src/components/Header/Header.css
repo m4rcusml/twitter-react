@@ -1,0 +1,61 @@
+:root {
+  --bg-hover: #ffffff15;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+.profile-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 4em;
+  border: none;
+  width: 200px;
+  align-self: center;
+  background-color: transparent;
+  color: white;
+  transition: all 200ms;
+}
+
+.profile-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.profile-btn .info {
+  display: grid;
+  grid-template-areas: "img ." "img .";
+  column-gap: 1rem;
+  row-gap: 0;
+}
+
+.profile-btn .img {
+  grid-area: img;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #777777;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-btn .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-btn .nickname {
+  justify-self: flex-start;
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+.profile-btn .username {
+  color: #808080;
+}

@@ -1,29 +1,28 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-const Estilo = styled.div`
-  cursor: pointer;
-  width: 200px;
+const Estilo = styled.a`
+  display: block;
+  color: white;
+  width: 250px;
   min-height: 40px;
-  border-radius: 4em;
-  transition: 200ms;
+  text-decoration: none;
 
-  :hover {
-    background-color: #ffffff25;
+  :hover > .container {
+    background-color: var(--bg-hover);
   }
 
-  a {
-    color: white;
+  .container {
+    cursor: pointer;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    padding: .8rem 1em;
+    width: fit-content;
+    padding: .8rem 1.5em 1rem 1em;
+    border-radius: 4em;
+    transition: 200ms;
   }
   .icon {
     font-size: 3.5rem;
-
     aspect-radio: 1 / 1;
   }
   .content {
@@ -35,6 +34,10 @@ const Estilo = styled.div`
   @media screen and (max-width:768px) {
     width: fit-content;
 
+    .container {
+      padding: 1rem 1.2rem 1.2rem 1.2rem;
+    aspect-radio: 1 / 1;
+    }
     .content {
       display: none;
     }
@@ -43,15 +46,15 @@ const Estilo = styled.div`
 
 function MenuButton({ icon, where, children }) {
   return (
-    <Estilo>
-      <a href={where}>
+    <Estilo href={where}>
+      <div className="container">
         <div className="icon material-symbols-outlined">
           {icon}
         </div>
         <div className="content">
           {children}
         </div>
-      </a>
+      </div>
     </Estilo>
   )
 }
